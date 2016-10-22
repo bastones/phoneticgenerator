@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="main">
-        <h1>Phonetic Generator</h1>
+        <h1 data-english="Phonetic Generator" data-deutsch="Phonetischer Generator">Phonetic Generator</h1>
 
         <form>
             <p>
@@ -22,7 +22,7 @@
         </form>
 
         <div id="result" data-default="Copyright &copy; Ben Stones, 2016. All rights reserved.">
-            Copyright &copy; <a href="http://www.b3ns.com">Ben Stones</a>, 2016. All rights reserved.
+            Copyright &copy; Ben Stones, 2016. All rights reserved.
         </div>
     </div>
 

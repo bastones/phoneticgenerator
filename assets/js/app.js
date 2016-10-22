@@ -7,44 +7,189 @@
  */
 
 $(document).ready(function() {
-    alphabet = Array();
+    var alphabet = {
+        a: {
+            english: 'Alpha',
+            deutsch: 'Anton'
+        },
 
-    alphabet['a'] = 'Alpha';
-    alphabet['b'] = 'Bravo';
-    alphabet['c'] = 'Charlie';
-    alphabet['d'] = 'Delta';
-    alphabet['e'] = 'Echo';
-    alphabet['f'] = 'Foxtrot';
-    alphabet['g'] = 'Golf';
-    alphabet['h'] = 'Hotel';
-    alphabet['i'] = 'India';
-    alphabet['j'] = 'Juliet';
-    alphabet['k'] = 'Kilo';
-    alphabet['l'] = 'Lima';
-    alphabet['m']= 'Mike';
-    alphabet['n'] = 'November';
-    alphabet['o'] = 'Oscar';
-    alphabet['p'] = 'Papa';
-    alphabet['q'] = 'Quebec';
-    alphabet['r'] = 'Romeo';
-    alphabet['s'] = 'Sierra';
-    alphabet['t'] = 'Tango';
-    alphabet['u'] = 'Uniform';
-    alphabet['v']= 'Victor';
-    alphabet['w'] = 'Whisky';
-    alphabet['x'] = 'X-Ray';
-    alphabet['y'] = 'Yankee';
-    alphabet['z'] = 'Zulu';
-    alphabet['0'] = 'Zero';
-    alphabet['1'] = 'One';
-    alphabet['2'] = 'Two';
-    alphabet['3'] = 'Three';
-    alphabet['4'] = 'Four';
-    alphabet['5'] = 'Five';
-    alphabet['6'] = 'Six';
-    alphabet['7'] = 'Seven';
-    alphabet['8'] = 'Eight';
-    alphabet['9'] = 'Nine';
+        b: {
+            english: 'Bravo',
+            deutsch: 'Berta'
+        },
+
+        c: {
+            english: 'Charlie',
+            deutsch: 'Cäsar'
+        },
+
+        d: {
+            english: 'Delta',
+            deutsch: 'Dora'
+        },
+
+        e: {
+            english: 'Echo',
+            deutsch: 'Emil'
+        },
+
+        f: {
+            english: 'Foxtrot',
+            deutsch: 'Friedrich'
+        },
+
+        g: {
+            english: 'Golf',
+            deutsch: 'Gustav'
+        },
+
+        h: {
+            english: 'Hotel',
+            deutsch: 'Heinrich'
+        },
+
+        i: {
+            english: 'Indigo',
+            deutsch: 'Ida'
+        },
+
+        j: {
+            english: 'Juliet',
+            deutsch: 'Julius'
+        },
+
+        k: {
+            english: 'Kilo',
+            deutsch: 'Kaufmann'
+        },
+
+        l: {
+            english: 'Lima',
+            deutsch: 'Ludwig'
+        },
+
+        m: {
+            english: 'Martha',
+            deutsch: 'Mike'
+        },
+
+        n: {
+            english: 'November',
+            deutsch: 'Nordpol'
+        },
+
+        o: {
+            english: 'Oscar',
+            deutsch: 'Otto'
+        },
+
+        p: {
+            english: 'Papa',
+            deutsch: 'Paula'
+        },
+
+        q: {
+            english: 'Quebec',
+            deutsch: 'Quelle'
+        },
+
+        r: {
+            english: 'Romeo',
+            deutsch: 'Richard'
+        },
+
+        s: {
+            english: 'Sierra',
+            deutsch: 'Siegfried'
+        },
+
+        t: {
+            english: 'Tango',
+            deutsch: 'Theodor'
+        },
+
+        u: {
+            english: 'Uniform',
+            deutsch: 'Ulrich'
+        },
+
+        v: {
+            english: 'Victor',
+            deutsch: 'Viktor'
+        },
+
+        w: {
+            english: 'Whiskey',
+            deutsch: 'Wilhelm'
+        },
+
+        x: {
+            english: 'X-Ray',
+            deutsch: 'Xanthippe'
+        },
+
+        y: {
+            english: 'Yankee',
+            deutsch: 'Ypsilon'
+        },
+
+        z: {
+            english: 'Zulu',
+            deutsch: 'Zeppelin'
+        },
+
+        0: {
+            english: 'Zero',
+            deutsch: 'Null'
+        },
+
+        1: {
+            english: 'One',
+            deutsch: 'Eins'
+        },
+
+        2: {
+            english: 'Two',
+            deutsch: 'Zwei'
+        },
+
+        3: {
+            english: 'Three',
+            deutsch: 'Drei'
+        },
+
+        4: {
+            english: 'Four',
+            deutsch: 'Vier'
+        },
+
+        5: {
+            english: 'Fivex',
+            deutsch: 'Fünf'
+        },
+
+        6: {
+            english: 'Six',
+            deutsch: 'Sechs'
+        },
+
+        7: {
+            english: 'Seven',
+            deutsch: 'Sieben'
+        },
+
+        8: {
+            english: 'Eight',
+            deutsch: 'Acht'
+        },
+
+        9: {
+            english: 'Nine',
+            deutsch: 'Neun'
+        }
+    };
+
+    var defaultLanguage = 'english';
 
     $('form').submit(function(e) {
         e.preventDefault();
@@ -56,17 +201,18 @@ $(document).ready(function() {
 
             var phonetic = '';
 
+            var result = $('div#result');
+
             for (i = 0; i < characters.length; i++) {
-                if (typeof alphabet[characters[i]] !== 'undefined' && alphabet[characters[i]]) {
-                    //phonetic += characters[i].toUpperCase() + ' for <span>' + alphabet[characters[i]] + '</span>, ';
-                    phonetic += alphabet[characters[i]] + ', ';
+                if (typeof alphabet[characters[i]][defaultLanguage] !== 'undefined' && alphabet[characters[i]][defaultLanguage]) {
+                    phonetic += alphabet[characters[i]][defaultLanguage] + ', ';
                 }
             }
 
             if (characters.length) {
-                $('div#result').html('<p>' + phonetic.substring(0, phonetic.length - 2) + '</p>');
+                result.html('<p>' + phonetic.substring(0, phonetic.length - 2) + '</p>');
             } else {
-                $('div#result').html($('div#result').attr('data-default'));
+                result.html(result.attr('data-default'));
             }
         }
     });

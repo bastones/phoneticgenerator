@@ -38,6 +38,14 @@ a:hover {
     border-color: #7e7e7e;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
 div#main {
     padding-top: 200px;
     max-width: 750px;
@@ -48,6 +56,10 @@ div#main > h1 {
     margin: 0 0 25px 0;
     font-size: 50px;
     font-weight: 200;
+}
+
+div#main > form {
+    margin-bottom: 20px;
 }
 
 div#main > form > p > input {
@@ -80,7 +92,6 @@ div#main > form > p > input:focus {
 }
 
 div#main > div#result {
-    margin-top: 30px;
     font-size: 14px;
 }
 

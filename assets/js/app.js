@@ -10,182 +10,218 @@ $(document).ready(function() {
     var alphabet = {
         a: {
             english: 'Alpha',
-            deutsch: 'Anton'
+            deutsch: 'Anton',
+            animals: 'Anaconda'
         },
 
         b: {
             english: 'Bravo',
-            deutsch: 'Berta'
+            deutsch: 'Berta',
+            animals: 'Bluebird',
         },
 
         c: {
             english: 'Charlie',
-            deutsch: 'Cäsar'
+            deutsch: 'Cäsar',
+            animals: 'Chameleon'
         },
 
         d: {
             english: 'Delta',
-            deutsch: 'Dora'
+            deutsch: 'Dora',
+            animals: 'Dog'
         },
 
         e: {
             english: 'Echo',
-            deutsch: 'Emil'
+            deutsch: 'Emil',
+            animals: 'Elephant'
         },
 
         f: {
             english: 'Foxtrot',
-            deutsch: 'Friedrich'
+            deutsch: 'Friedrich',
+            animals: 'Ferret'
         },
 
         g: {
             english: 'Golf',
-            deutsch: 'Gustav'
+            deutsch: 'Gustav',
+            animals: 'Gnu'
         },
 
         h: {
             english: 'Hotel',
-            deutsch: 'Heinrich'
+            deutsch: 'Heinrich',
+            animals: 'Hamster'
         },
 
         i: {
             english: 'Indigo',
-            deutsch: 'Ida'
+            deutsch: 'Ida',
+            animals: 'Ibex'
         },
 
         j: {
             english: 'Juliet',
-            deutsch: 'Julius'
+            deutsch: 'Julius',
+            animals: 'Kangaroo'
         },
 
         k: {
             english: 'Kilo',
-            deutsch: 'Kaufmann'
+            deutsch: 'Kaufmann',
+            animals: 'Kitten'
         },
 
         l: {
             english: 'Lima',
-            deutsch: 'Ludwig'
+            deutsch: 'Ludwig',
+            animals: 'Ladybug'
         },
 
         m: {
             english: 'Martha',
-            deutsch: 'Mike'
+            deutsch: 'Mike',
+            animals: 'Mouse'
         },
 
         n: {
             english: 'November',
-            deutsch: 'Nordpol'
+            deutsch: 'Nordpol',
+            animals: 'Nautilus'
         },
 
         o: {
             english: 'Oscar',
-            deutsch: 'Otto'
+            deutsch: 'Otto',
+            animals: 'Orca'
         },
 
         p: {
             english: 'Papa',
-            deutsch: 'Paula'
+            deutsch: 'Paula',
+            animals: 'Pigeon'
         },
 
         q: {
             english: 'Quebec',
-            deutsch: 'Quelle'
+            deutsch: 'Quelle',
+            animals: 'Quetzal'
         },
 
         r: {
             english: 'Romeo',
-            deutsch: 'Richard'
+            deutsch: 'Richard',
+            animals: 'Rabbit'
         },
 
         s: {
             english: 'Sierra',
-            deutsch: 'Siegfried'
+            deutsch: 'Siegfried',
+            animals: 'Squirrel'
         },
 
         t: {
             english: 'Tango',
-            deutsch: 'Theodor'
+            deutsch: 'Theodor',
+            animals: 'Tuna'
         },
 
         u: {
             english: 'Uniform',
-            deutsch: 'Ulrich'
+            deutsch: 'Ulrich',
+            animals: 'Urchin'
         },
 
         v: {
             english: 'Victor',
-            deutsch: 'Viktor'
+            deutsch: 'Viktor',
+            animals: 'Viper'
         },
 
         w: {
             english: 'Whiskey',
-            deutsch: 'Wilhelm'
+            deutsch: 'Wilhelm',
+            animals: 'Wasp'
         },
 
         x: {
             english: 'X-Ray',
-            deutsch: 'Xanthippe'
+            deutsch: 'Xanthippe',
+            animals: 'Xerus'
         },
 
         y: {
             english: 'Yankee',
-            deutsch: 'Ypsilon'
+            deutsch: 'Ypsilon',
+            animals: 'Yak'
         },
 
         z: {
             english: 'Zulu',
-            deutsch: 'Zeppelin'
+            deutsch: 'Zeppelin',
+            animals: 'Zebra'
         },
 
         0: {
             english: 'Zero',
-            deutsch: 'Null'
+            deutsch: 'Null',
+            animals: 'Zero'
         },
 
         1: {
             english: 'One',
-            deutsch: 'Eins'
+            deutsch: 'Eins',
+            animals: 'One'
         },
 
         2: {
             english: 'Two',
-            deutsch: 'Zwei'
+            deutsch: 'Zwei',
+            animals: 'Two'
         },
 
         3: {
             english: 'Three',
-            deutsch: 'Drei'
+            deutsch: 'Drei',
+            animals: 'Three'
         },
 
         4: {
             english: 'Four',
-            deutsch: 'Vier'
+            deutsch: 'Vier',
+            animals: 'Four'
         },
 
         5: {
-            english: 'Fivex',
-            deutsch: 'Fünf'
+            english: 'Five',
+            deutsch: 'Fünf',
+            animals: 'Five'
         },
 
         6: {
             english: 'Six',
-            deutsch: 'Sechs'
+            deutsch: 'Sechs',
+            animals: 'Six'
         },
 
         7: {
             english: 'Seven',
-            deutsch: 'Sieben'
+            deutsch: 'Sieben',
+            animals: 'Seven'
         },
 
         8: {
             english: 'Eight',
-            deutsch: 'Acht'
+            deutsch: 'Acht',
+            animals: 'Eight'
         },
 
         9: {
             english: 'Nine',
-            deutsch: 'Neun'
+            deutsch: 'Neun',
+            animals: 'Nine'
         }
     };
 

@@ -98,6 +98,7 @@ div#main > div#result > p {
 }
 
 div#main > div#options {
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 

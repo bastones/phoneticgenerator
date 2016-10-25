@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="main">
-        <h1 class="toggle-label" data-english="Phonetic Generator" data-deutsch="Phonetischer Generator" data-animal="Meow Meow">Phonetic Generator</h1>
+        <h1 class="language-specific" data-english="Phonetic Generator" data-deutsch="Phonetischer Generator" data-animal="Meow Meow">Phonetic Generator</h1>
 
         <form>
             <p>

@@ -246,6 +246,11 @@ $(document).ready(function() {
         // Change the default language
         defaultLanguage = selection.attr('data-language');
 
+        // Switch text on labels to use the new default language
+        $('.language-specific').text(
+            $('.language-specific').attr('data-' + defaultLanguage)
+        );
+
         // Trigger generation with new language
         generate(formInput);
     });

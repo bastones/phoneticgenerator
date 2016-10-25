@@ -71,7 +71,7 @@ $(document).ready(function() {
         k: {
             english: 'Kilo',
             deutsch: 'Kaufmann',
-            animals: 'Kitten'
+            animals: 'Koala'
         },
 
         l: {

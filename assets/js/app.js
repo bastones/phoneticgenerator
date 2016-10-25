@@ -81,8 +81,8 @@ $(document).ready(function() {
         },
 
         m: {
-            english: 'Martha',
-            deutsch: 'Mike',
+            english: 'Mike',
+            deutsch: 'Martha',
             animals: 'Mouse'
         },
 

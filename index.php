@@ -1,5 +1,3 @@
-<!-- Copyright Ben Stones (ben@b3ns.com), 2016. All rights reserved. Do not use in your own projects without prior permission. -->
-
 <!DOCTYPE html>
 <html>
 <head>

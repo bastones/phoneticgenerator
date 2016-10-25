@@ -17,7 +17,7 @@ $(document).ready(function() {
         b: {
             english: 'Bravo',
             deutsch: 'Berta',
-            animals: 'Bluebird',
+            animals: 'Bluebird'
         },
 
         c: {

@@ -40,7 +40,13 @@
         </div>
 
         <div id="copyright">
-            <p>Copyright &copy; Ben Stones, 2016. All rights reserved.</p>
+            <p>
+                Copyright &copy; Ben Stones, 2016. All rights reserved.
+            </p>
+
+            <p>
+                <a href="mailto:feedback@phoneticgenerator.com">Have Feedback?</a>
+            </p>
         </div>
     </div>
 

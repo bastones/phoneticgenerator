@@ -152,6 +152,11 @@ div#main > div#copyright > p {
     margin: 0;
 }
 
+div#main > div#copyright > p:last-child {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
 @media (max-width: 800px) {
     div#main {
         padding-left: 30px;

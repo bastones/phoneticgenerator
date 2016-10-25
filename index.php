@@ -13,16 +13,34 @@
 </head>
 <body>
     <div id="main">
-        <h1 data-english="Phonetic Generator" data-deutsch="Phonetischer Generator">Phonetic Generator</h1>
+        <h1 class="toggle-label" data-english="Phonetic Generator" data-deutsch="Phonetischer Generator" data-animal="Meow Meow">Phonetic Generator</h1>
 
         <form>
             <p>
-                <input type="text" name="characters" class="form-control">
+                <input type="text" name="characters" class="form-control" autofocus>
             </p>
         </form>
 
-        <div id="result" data-default="Copyright &copy; Ben Stones, 2016. All rights reserved.">
-            Copyright &copy; Ben Stones, 2016. All rights reserved.
+        <div id="result"></div>
+
+        <div id="options">
+            <ul>
+                <li class="active" data-language="english">
+                    <a href="javascript:;" accesskey="e">
+                        English
+                    </a>
+                </li>
+
+                <li data-language="deutsch">
+                    <a href="javascript:;" accesskey="d">
+                        Deutsch
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="copyright">
+            <p>Copyright &copy; Ben Stones, 2016. All rights reserved.</p>
         </div>
     </div>
 

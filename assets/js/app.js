@@ -227,29 +227,51 @@ $(document).ready(function() {
 
     var defaultLanguage = 'english';
 
+    var formInput = $('form input');
+
+    var resultBox = $('div#result');
+
     $('form').submit(function(e) {
         e.preventDefault();
     });
 
-    $('form input').keyup(function(e) {
+    $('div#options > ul > li > a').click(function() {
+
+        // Get parent element of selected option
+        var selection = $(this).parent();
+
+        // Set the selected option active
+        selection.addClass('active').siblings().removeClass('active');
+
+        // Change the default language
+        defaultLanguage = selection.attr('data-language');
+
+        // Trigger generation with new language
+        generate(formInput);
+    });
+
+    formInput.keyup(function(e) {
         if (e.keyCode != 16) {
-            var characters = $(this).val().toLowerCase().split('');
-
-            var phonetic = '';
-
-            var result = $('div#result');
-
-            for (i = 0; i < characters.length; i++) {
-                if (typeof alphabet[characters[i]][defaultLanguage] !== 'undefined' && alphabet[characters[i]][defaultLanguage]) {
-                    phonetic += alphabet[characters[i]][defaultLanguage] + ', ';
-                }
-            }
-
-            if (characters.length) {
-                result.html('<p>' + phonetic.substring(0, phonetic.length - 2) + '</p>');
-            } else {
-                result.html(result.attr('data-default'));
-            }
+            generate($(this));
         }
     });
+
+    function generate(object)
+    {
+        var characters = object.val().toLowerCase().split('');
+
+        var phonetic = '';
+
+        for (i = 0; i < characters.length; i++) {
+            if (typeof alphabet[characters[i]][defaultLanguage] !== 'undefined' && alphabet[characters[i]][defaultLanguage]) {
+                phonetic += alphabet[characters[i]][defaultLanguage] + ', ';
+            }
+        }
+
+        if (characters.length) {
+            resultBox.html('<p>' + phonetic.substring(0, phonetic.length - 2) + '</p>').slideDown('medium');
+        } else {
+            resultBox.slideUp('fast');
+        }
+    }
 });

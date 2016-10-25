@@ -75,12 +75,6 @@ div#main > form > p > input {
     border-radius: 3px;
     border: 1px solid #bebebe;
     box-shadow: inset 1px 1px 2px 0px #efefef;
-    background-color: #fcfcfc;
-    -webkit-transition: all 200ms ease 0s;
-    -moz-transition: all 200ms ease 0s;
-    -ms-transition: all 200ms ease 0s;
-    -o-transition: all 200ms ease 0s;
-    transition: all 200ms ease 0s;
 }
 
 div#main > form > p > input:hover {
@@ -92,6 +86,8 @@ div#main > form > p > input:focus {
 }
 
 div#main > div#result {
+    margin-bottom: 20px;
+    display: none;
     font-size: 14px;
 }
 
@@ -99,6 +95,60 @@ div#main > div#result > p {
     margin: 0;
     font-size: 22px;
     line-height: 155%;
+}
+
+div#main > div#options {
+    margin-bottom: 20px;
+}
+
+div#main > div#options > ul {
+    padding-left: 0;
+    font-size: 0;
+}
+
+div#main > div#options > ul > li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+div#main > div#options > ul > li > a {
+    display: block;
+    width: 200px;
+    font-size: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
+    border-bottom: 0;
+    color: #000;
+    background-color: #ccc;
+    -webkit-transition: all 200ms ease 0s;
+    -moz-transition: all 200ms ease 0s;
+    -ms-transition: all 200ms ease 0s;
+    -o-transition: all 200ms ease 0s;
+    transition: all 200ms ease 0s;
+}
+
+div#main > div#options > ul > li.active > a {
+    color: #fff;
+    background-color: #555;
+}
+
+div#main > div#options > ul > li:not(.active) > a:active {
+    background-color: #dedede;
+}
+
+div#main > div#options > ul > li:first-child > a {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+div#main > div#options > ul > li:last-child > a {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+div#main > div#copyright > p {
+    margin: 0;
 }
 
 @media (max-width: 800px) {
@@ -113,10 +163,41 @@ div#main > div#result > p {
     }
 
     div#main > form > p > input {
+        padding: 10px;
         font-size: 21px;
     }
 
     div#main > div#result > p {
         font-size: 17px;
+    }
+
+    div#main > div#copyright > p {
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    div#main {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    div#main > h1 {
+        margin: 0 0 10px 0;
+        font-size: 28px;
+    }
+
+    div#main > form > p > input {
+        padding: 10px;
+        font-size: 21px;
+    }
+
+    div#main > div#result > p {
+        font-size: 17px;
+    }
+
+    div#main > div#copyright > p {
+        font-size: 14px;
     }
 }

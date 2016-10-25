@@ -253,6 +253,9 @@ $(document).ready(function() {
 
         // Trigger generation with new language
         generate(formInput);
+
+        // Put focus on input field
+        formInput.focus();
     });
 
     formInput.keyup(function(e) {

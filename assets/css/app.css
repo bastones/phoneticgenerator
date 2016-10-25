@@ -83,6 +83,7 @@ div#main > form > p > input:hover {
 
 div#main > form > p > input:focus {
     border-color: #9a9a9a;
+    outline: none;
 }
 
 div#main > div#result {

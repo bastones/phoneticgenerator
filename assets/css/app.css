@@ -171,6 +171,11 @@ div#main > div#copyright > p {
         font-size: 17px;
     }
 
+    div#main > div#options > ul > li > a {
+        width: 150px;
+        font-size: 14px;
+    }
+
     div#main > div#copyright > p {
         font-size: 15px;
     }
@@ -195,6 +200,12 @@ div#main > div#copyright > p {
 
     div#main > div#result > p {
         font-size: 17px;
+    }
+
+    div#main > div#options > ul > li > a {
+        width: 100px;
+        font-size: 13px;
+        padding-top: 8px;
     }
 
     div#main > div#copyright > p {

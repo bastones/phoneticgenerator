@@ -41,7 +41,7 @@
 
         <div id="copyright">
             <p>
-                Copyright &copy; 2016 Ben Stones, et. al. Contribute on <a href="https://bitbucket.org/bastones/phoneticgenerator" target="blank">Bitbucket</a>.
+                Copyright &copy; 2016 Ben Stones, et. al. Contribute on <a href="https://github.com/bastones/phoneticgenerator" target="blank">GitHub</a>.
             </p>
 
             <p>

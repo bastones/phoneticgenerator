@@ -267,7 +267,7 @@ $(document).ready(function() {
         var phonetic = '';
 
         for (i = 0; i < characters.length; i++) {
-            if (typeof alphabet[characters[i]][defaultLanguage] !== 'undefined' && alphabet[characters[i]][defaultLanguage]) {
+            if (typeof alphabet[characters[i]] !== 'undefined' && typeof alphabet[characters[i]][defaultLanguage] !== 'undefined') {
                 phonetic += alphabet[characters[i]][defaultLanguage] + ', ';
             }
         }

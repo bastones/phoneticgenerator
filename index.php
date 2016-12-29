@@ -7,13 +7,17 @@
 
     <link rel="stylesheet" href="assets/css/app.css">
 
+    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta charset="utf-8">
 </head>
 <body>
     <div id="main">
-        <h1 class="language-specific" data-english="Phonetic Generator" data-deutsch="Phonetischer Generator" data-animals="Meow Meow">Phonetic Generator</h1>
+        <h1 class="language-specific" data-english="Phonetic Generator" data-deutsch="Phonetischer Generator" data-francais="Générateur Phonétique" data-animals="Meow Meow">
+            Phonetic Generator
+        </h1>
 
         <form>
             <p>
@@ -36,16 +40,28 @@
                         Deutsch
                     </a>
                 </li>
+
+                <li data-language="francais">
+                    <a href="javascript:;" accesskey="d">
+                        Français
+                    </a>
+                </li>
             </ul>
         </div>
 
         <div id="copyright">
             <p>
-                Copyright &copy; 2016 Ben Stones, et. al. Contribute on <a href="https://github.com/bastones/phoneticgenerator" target="blank">GitHub</a>.
+                <span class="language-specific" data-english="Copyright &copy; 2016 Ben Stones, et. al" data-deutsch="Urheberrecht &copy; 2016 Ben Stones, und andere" data-francais="Droits d'auteur &copy; 2016 Ben Stones, et d'autres" data-animals="Copyright &copy; 2016 Ben Stones, et. al">
+                      Copyright &copy; 2016 Ben Stones, et. al.
+                </span>
+
+                <a href="https://github.com/bastones/phoneticgenerator" target="blank" class="icon" title="Contribute on GitHub">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
             </p>
 
             <p>
-                <a href="mailto:feedback@phoneticgenerator.com">Have Feedback?</a>
+                <a href="mailto:feedback@phoneticgenerator.com" class="language-specific" data-english="Have Feedback?" data-deutsch="Haben Sie Feedback?" data-francais="Avez-vous des commentaires?" data-animal="Pur pur">Have Feedback?</a>
             </p>
         </div>
     </div>

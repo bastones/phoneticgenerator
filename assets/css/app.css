@@ -115,7 +115,6 @@ div#main > div#options > ul > li > a {
     font-size: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
-    border-radius: 5px;
     border-bottom: 0;
     color: #000;
     background-color: #ccc;
@@ -135,14 +134,14 @@ div#main > div#options > ul > li:not(.active) > a:active {
     background-color: #dedede;
 }
 
-div#main > div#options > ul > li:first-child > a {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+div#main > div#options > ul > li:nth-child(1) > a {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-div#main > div#options > ul > li:last-child > a {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+div#main > div#options > ul > li:nth-child(3) > a {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 div#main > div#copyright > p {
@@ -152,6 +151,14 @@ div#main > div#copyright > p {
 div#main > div#copyright > p:last-child {
     margin-top: 5px;
     font-size: 13px;
+}
+
+div#main > div#copyright > p > a.icon {
+    position: relative;
+    top: 2px;
+    border-bottom: 0;
+    font-size: 20px;
+    margin-left: 5px;
 }
 
 @media (max-width: 800px) {
@@ -184,6 +191,31 @@ div#main > div#copyright > p:last-child {
     }
 }
 
+@media (max-width: 768px) {
+    div#main > div#options {
+        margin-top: 25px;
+    }
+
+    div#main > div#options > ul > li {
+        display: block;
+    }
+
+    div#main > div#options > ul > li:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    div#main > div#options > ul > li > a {
+        width: 100%;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    div#main > h1 {
+        margin: 0 0 10px 0;
+        font-size: 28px;
+    }
+}
 
 @media (max-width: 400px) {
     div#main {
@@ -193,7 +225,7 @@ div#main > div#copyright > p:last-child {
 
     div#main > h1 {
         margin: 0 0 10px 0;
-        font-size: 28px;
+        font-size: 25px;
     }
 
     div#main > form > p > input {
@@ -206,7 +238,6 @@ div#main > div#copyright > p:last-child {
     }
 
     div#main > div#options > ul > li > a {
-        width: 100px;
         font-size: 13px;
         padding-top: 8px;
     }

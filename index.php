@@ -42,7 +42,7 @@
                 </li>
 
                 <li data-language="francais">
-                    <a href="javascript:;" accesskey="d">
+                    <a href="javascript:;" accesskey="f">
                         Français
                     </a>
                 </li>

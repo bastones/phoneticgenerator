@@ -61,7 +61,7 @@
             </p>
 
             <p>
-                <a href="mailto:feedback@phoneticgenerator.com" class="language-specific" data-english="Have Feedback?" data-deutsch="Haben Sie Feedback?" data-francais="Avez-Vous Des Commentaires?" data-animal="Pur pur">Have Feedback?</a>
+                <a href="mailto:feedback@phoneticgenerator.com" class="language-specific" data-english="Have Feedback?" data-deutsch="Haben Sie Feedback?" data-francais="Avez-Vous Des Commentaires?" data-animals="Pur pur">Have Feedback?</a>
             </p>
         </div>
     </div>

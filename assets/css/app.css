@@ -210,6 +210,12 @@ div#main > div#copyright > p > a.icon {
     }
 }
 
+@media (max-width: 1000px) {
+    div#main {
+        padding-top: 40px;
+    }
+}
+
 @media (max-width: 600px) {
     div#main > h1 {
         margin: 0 0 10px 0;

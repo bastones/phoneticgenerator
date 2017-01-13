@@ -22,6 +22,8 @@
         <form>
             <p>
                 <input type="text" name="characters" class="form-control" autofocus>
+
+                <a href="javascript:;" accesskey="s"">Enable Speech</a>
             </p>
         </form>
 
@@ -29,19 +31,19 @@
 
         <div id="options">
             <ul>
-                <li class="active" data-language="english">
+                <li class="active" data-language="english" data-speech="true">
                     <a href="javascript:;" accesskey="e">
                         English
                     </a>
                 </li>
 
-                <li data-language="deutsch">
+                <li data-language="deutsch" data-speech="false">
                     <a href="javascript:;" accesskey="d">
                         Deutsch
                     </a>
                 </li>
 
-                <li data-language="francais">
+                <li data-language="francais" data-speech="false">
                     <a href="javascript:;" accesskey="f">
                         Français
                     </a>

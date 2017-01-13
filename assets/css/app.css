@@ -57,6 +57,39 @@ div#main > h1 {
 div#main > form {
     margin-bottom: 20px;
 }
+    
+div#main > form > p {
+    position: relative;
+}
+
+div#main > form > p > a {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0;
+    border-bottom: 0;
+}
+
+div#main > form > p > a::before {
+    content: '\f028';
+    color: #aaa;
+    font-size: 34px;
+    font-family: 'FontAwesome';
+    -webkit-transition: all 200ms ease 0s;
+    -moz-transition: all 200ms ease 0s;
+    -ms-transition: all 200ms ease 0s;
+    -o-transition: all 200ms ease 0s;
+    transition: all 200ms ease 0s;
+}
+
+div#main > form > p > a:not(.active):hover::before {
+    color: #999;
+}
+
+div#main > form > p > a:not(.active):active::before {
+    color: #888;
+}
 
 div#main > form > p > input {
     width: 100%;

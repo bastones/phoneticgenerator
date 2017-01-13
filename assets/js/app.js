@@ -260,23 +260,49 @@ $(document).ready(function() {
     var defaultLanguage = 'english';
 
     var formInput = $('form input');
+    var phoneticValue = '';
 
     var resultBox = $('div#result');
 
+    var speakButton = $('form input + a');
+    var speechSynthesis = window.speechSynthesis;
+    var speechSupported = true;
+
+    /**
+     * Event handler for the submit event on the form.
+     */
     $('form').submit(function(e) {
+
+        // Prevent the browser from submitting the form
         e.preventDefault();
     });
 
+    /**
+     * Event handler for the click event on the language toggles.
+     */
     $('div#options > ul > li > a').click(function() {
 
         // Get parent element of selected option
         var selection = $(this).parent();
+
+        // Put focus on input field
+        formInput.focus();
 
         // Set the selected option active
         selection.addClass('active').siblings().removeClass('active');
 
         // Change the default language
         defaultLanguage = selection.attr('data-language');
+
+        // Get speech support for the new language
+        speechSupported = (selection.attr('data-speech') === 'true');
+
+        // Check if speech support is enabled
+        if (speechSupported) {
+            speakButton.stop().fadeIn(400);
+        } else {
+            speakButton.stop().fadeOut(400);
+        }
 
         // Switch text on labels to use the new default language
         $('.language-specific').each(function () {
@@ -287,33 +313,86 @@ $(document).ready(function() {
 
         // Trigger generation with new language
         generate(formInput);
-
-        // Put focus on input field
-        formInput.focus();
     });
 
-    formInput.keyup(function(e) {
-        if (e.keyCode != 16) {
-            generate($(this));
+    /**
+     * Event handler for the keyup event on the form input field.
+     */
+    formInput.keyup(function (e) {
+
+        // Generate phonetic text
+        generate($(this));
+
+        if (speechSupported) {
+            if (phoneticValue.replace(/[^a-z0-9.,\s]/gi, '').length) {
+                speakButton.stop().fadeIn(400);
+            } else {
+                speakButton.stop().fadeOut(400);
+            }
         }
     });
 
+    /**
+     * Event handler for the click event on the speaker button.
+     */
+    speakButton.click(function () {
+
+        // Toggle the speak button activation status
+        $(this).toggleClass('active');
+
+        // Set speech to either enabled or disabled
+        speechEnabled = ($(this).hasClass('active'));
+
+        // Put focus on the input field
+        formInput.focus();
+
+        // As we are about to use speech, we need to cancel anything currently in the queue
+        speechSynthesis.cancel();
+
+        // Speak out phonetic translation
+        speak(phoneticValue.replace(/[^a-z0-9.,\s]gi/, ''));
+    });
+
+    /**
+     * Generate phonetic text.
+     *
+     * @param object
+     */
     function generate(object)
     {
         var characters = object.val().toLowerCase().split('');
 
-        var phonetic = '';
+        phoneticValue = '';
 
         for (i = 0; i < characters.length; i++) {
             if (typeof alphabet[characters[i]] !== 'undefined' && typeof alphabet[characters[i]][defaultLanguage] !== 'undefined') {
-                phonetic += alphabet[characters[i]][defaultLanguage] + ', ';
+                phoneticValue += alphabet[characters[i]][defaultLanguage] + ', ';
             }
         }
 
+        // If there are characters to display in the result box, display the element. Otherwise, slide it out of view.
         if (characters.length) {
-            resultBox.html('<p>' + phonetic.substring(0, phonetic.length - 2) + '</p>').slideDown('medium');
+            resultBox.html('<p>' + phoneticValue.substring(0, phoneticValue.length - 2) + '</p>').slideDown('medium');
         } else {
             resultBox.slideUp('fast');
+        }
+    }
+
+    /**
+     * Handle speech synthesis.
+     */
+    function speak(text)
+    {
+
+        if (typeof text !== 'undefined') {
+            if (text.length) {
+
+                // Stop previous speech
+                speechSynthesis.cancel();
+
+                // Start new speech
+                speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+            }
         }
     }
 });

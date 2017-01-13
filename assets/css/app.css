@@ -233,6 +233,12 @@ div#main > div#copyright > p > a.icon {
     }
 }
 
+@media (max-width: 1000px) {
+    div#main {
+        padding-top: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     div#main > div#options {
         margin-top: 25px;
@@ -249,12 +255,6 @@ div#main > div#copyright > p > a.icon {
     div#main > div#options > ul > li > a {
         width: 100%;
         border-radius: 5px;
-    }
-}
-
-@media (max-width: 1000px) {
-    div#main {
-        padding-top: 40px;
     }
 }
 

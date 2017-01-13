@@ -276,15 +276,6 @@ div#main > div#copyright > p > a.icon {
         font-size: 25px;
     }
 
-    div#main > form > p > input {
-        padding: 10px;
-        font-size: 21px;
-    }
-
-    div#main > div#result > p {
-        font-size: 17px;
-    }
-
     div#main > div#options > ul > li > a {
         font-size: 13px;
         padding-top: 8px;

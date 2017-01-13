@@ -54,7 +54,7 @@
         <div id="copyright">
             <p>
                 <span class="language-specific" data-english="Copyright &copy; 2016 Ben Stones, et. al" data-deutsch="Urheberrecht &copy; 2016 Ben Stones, und andere" data-francais="Droits d'auteur &copy; 2016 Ben Stones, et d'autres" data-animals="Copyright &copy; 2016 Ben Stones, et. al">
-                      Copyright &copy; 2016 Ben Stones, et. al.
+                      Copyright &copy; 2016, 2017 Ben Stones, et. al.
                 </span>
 
                 <a href="https://github.com/bastones/phoneticgenerator" target="blank" class="icon" title="Contribute on GitHub">

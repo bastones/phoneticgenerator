@@ -298,7 +298,7 @@ $(document).ready(function() {
         speechSupported = (selection.attr('data-speech') === 'true');
 
         // Check if speech support is enabled
-        if (speechSupported) {
+        if (speechSupported && phoneticValue.replace(/[^a-z0-9.,\s]/gi, '').length) {
             speakButton.stop().fadeIn(400);
         } else {
             speakButton.stop().fadeOut(400);

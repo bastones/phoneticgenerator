@@ -65,7 +65,7 @@ div#main > form > p {
 div#main > form > p > a {
     display: none;
     position: absolute;
-    top: 15px;
+    top: 17px;
     right: 15px;
     font-size: 0;
     border-bottom: 0;
@@ -94,7 +94,7 @@ div#main > form > p > a:not(.active):active::before {
 div#main > form > p > input {
     width: 100%;
     font-size: 28px;
-    padding: 15px 18px;
+    padding: 15px 55px 15px 18px;
     font-weight: 300;
     color: #555;
     text-align: center;
@@ -204,9 +204,18 @@ div#main > div#copyright > p > a.icon {
         margin: 0 0 20px 0;
         font-size: 35px;
     }
+    
+    div#main > form > p > a {
+        top: 12px;
+        right: 12px;
+    }
+    
+    div#main > form > p > a::before {
+        font-size: 25px;
+    }
 
     div#main > form > p > input {
-        padding: 10px;
+        padding: 10px 38px 10px 10px;
         font-size: 21px;
     }
 

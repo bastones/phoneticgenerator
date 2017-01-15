@@ -340,9 +340,6 @@ $(document).ready(function() {
         // Toggle the speak button activation status
         $(this).toggleClass('active');
 
-        // Set speech to either enabled or disabled
-        speechEnabled = ($(this).hasClass('active'));
-
         // Put focus on the input field
         formInput.focus();
 

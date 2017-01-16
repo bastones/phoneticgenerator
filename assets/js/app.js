@@ -368,7 +368,7 @@ $(document).ready(function() {
         }
 
         // If there are characters to display in the result box, display the element. Otherwise, slide it out of view.
-        if (characters.length) {
+        if (phoneticValue.length) {
             resultBox.html('<p>' + phoneticValue.substring(0, phoneticValue.length - 2) + '</p>').slideDown('medium');
         } else {
             resultBox.slideUp('fast');

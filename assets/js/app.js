@@ -258,6 +258,7 @@ $(document).ready(function() {
     };
 
     var defaultLanguage = 'english';
+    var defaultSpeech = 'en';
 
     var formInput = $('form input');
     var phoneticValue = '';
@@ -266,7 +267,7 @@ $(document).ready(function() {
 
     var speakButton = $('form input + a');
     var speechSynthesis = window.speechSynthesis;
-    var speechSupported = true;
+    var speechEnabled = (typeof speechSynthesis !== typeof undefined && speechSynthesis !== false) ? true : false;
 
     /**
      * Event handler for the submit event on the form.
@@ -291,17 +292,31 @@ $(document).ready(function() {
         // Set the selected option active
         selection.addClass('active').siblings().removeClass('active');
 
-        // Change the default language
+        // Change the default phonetic language
         defaultLanguage = selection.attr('data-language');
 
-        // Get speech support for the new language
-        speechSupported = (selection.attr('data-speech') === 'true');
+        // Check if speech support works in this browser
+        if (typeof speechSynthesis !== typeof undefined) {
 
-        // Check if speech support is enabled
-        if (speechSupported && phoneticValue.replace(/[^a-z0-9.,\s]/gi, '').length) {
-            speakButton.stop().fadeIn(400);
-        } else {
-            speakButton.stop().fadeOut(400);
+            // Check if speech is supported for the given language
+            if (typeof selection.attr('data-speech') !== typeof undefined && selection.attr('data-speech') !== false) {
+
+                // Change the default speech language
+                defaultSpeech = selection.attr('data-speech');
+
+                // Enable speech support, if disabled
+                speechEnabled = true;
+
+                // Display the speech button, if hidden
+                speakButton.stop().fadeIn(400);
+            } else {
+
+                // Speech is not supported for the given language
+                speechEnabled = false;
+
+                // Hide the speech button, if visible
+                speakButton.stop().fadeOut(400);
+            }
         }
 
         // Switch text on labels to use the new default language
@@ -323,7 +338,8 @@ $(document).ready(function() {
         // Generate phonetic text
         generate($(this));
 
-        if (speechSupported) {
+        // Check if the value in the text field has been translated phonetically (but only if speech is enabled for the current language)
+        if (speechEnabled) {
             if (phoneticValue.replace(/[^a-z0-9.,\s]/gi, '').length) {
                 speakButton.stop().fadeIn(400);
             } else {
@@ -362,7 +378,7 @@ $(document).ready(function() {
         phoneticValue = '';
 
         for (i = 0; i < characters.length; i++) {
-            if (typeof alphabet[characters[i]] !== 'undefined' && typeof alphabet[characters[i]][defaultLanguage] !== 'undefined') {
+            if (typeof alphabet[characters[i]] !== typeof undefined && alphabet[characters[i]] !== false && typeof alphabet[characters[i]][defaultLanguage] !== typeof undefined && alphabet[characters[i]][defaultLanguage] !== false) {
                 phoneticValue += alphabet[characters[i]][defaultLanguage] + ', ';
             }
         }
@@ -380,15 +396,20 @@ $(document).ready(function() {
      */
     function speak(text)
     {
-
-        if (typeof text !== 'undefined') {
+        if (typeof text !== typeof undefined && text !== false) {
             if (text.length) {
+
+                // Create new speech utterance instance
+                var speechUtterance = new SpeechSynthesisUtterance(text);
+
+                // Set the language for the speech utterance
+                speechUtterance.lang = defaultSpeech;
 
                 // Stop previous speech
                 speechSynthesis.cancel();
 
                 // Start new speech
-                speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+                speechSynthesis.speak(speechUtterance);
             }
         }
     }

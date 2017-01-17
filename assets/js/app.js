@@ -342,7 +342,7 @@ $(document).ready(function() {
 
         // Check if the value in the text field has been translated phonetically (but only if speech is enabled for the current language)
         if (speechEnabled) {
-            if (phoneticValue.replace(/[^a-z0-9.,\s]/gi, '').length) {
+            if (phoneticValue.length) {
                 speakButton.stop().fadeIn(400);
             } else {
                 speakButton.stop().fadeOut(400);
@@ -365,7 +365,7 @@ $(document).ready(function() {
         speechSynthesis.cancel();
 
         // Speak out phonetic translation
-        speak(phoneticValue.replace(/[^a-z0-9.,\s]gi/, ''));
+        speak(phoneticValue);
     });
 
     /**

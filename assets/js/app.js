@@ -307,8 +307,10 @@ $(document).ready(function() {
                 // Enable speech support, if disabled
                 speechEnabled = true;
 
-                // Display the speech button, if hidden
-                speakButton.stop().fadeIn(400);
+                // Display the speech button, if hidden (but only if there is translated text to speak)
+                if (phoneticValue.length) {
+                    speakButton.stop().fadeIn(400);
+                }
             } else {
 
                 // Speech is not supported for the given language

@@ -1,0 +1,6 @@
+{
+  "name": "phonetic-generator",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
+}

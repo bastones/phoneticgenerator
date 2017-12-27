@@ -359,6 +359,8 @@ $(document).ready(function() {
 
     /**
      * Handle speech synthesis.
+     *
+     * @param text
      */
     function speak(text)
     {

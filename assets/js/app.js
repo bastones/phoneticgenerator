@@ -215,7 +215,7 @@ $(document).ready(function() {
         },
 
         9: {
-            english: 'Nine',
+            english: 'Niner',
             deutsch: 'Neun',
             francais: 'Anatole',
         }
